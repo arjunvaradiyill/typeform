@@ -84,14 +84,14 @@ const questions = [
   {
     label: 'Any special requests?',
     type: 'textarea',
-    required: false,
+    required: true,
     name: 'requests',
     placeholder: 'Let us know your special requests'
   },
   {
     label: 'What is your estimated total budget?',
     type: 'number',
-    required: false,
+    required: true,
     name: 'budget',
     prefix: '₹',
     placeholder: 'Enter your budget'
@@ -143,6 +143,15 @@ function App() {
     }
   }
 
+  const handleBack = () => {
+    if (onCaptchaPage) {
+      setOnCaptchaPage(false)
+      setCurrentQ(questions.length)
+    } else if (currentQ > 0) {
+      setCurrentQ(currentQ - 1)
+    }
+  }
+
   return (
     <div className="bg-container">
       <nav className="navbar">
@@ -170,20 +179,27 @@ function App() {
               onChange={value => setCaptchaValue(value)}
             />
           </div>
-          <button
-            className="hero-btn"
-            style={{ fontSize: "2rem", marginTop: "24px" }}
-            disabled={!captchaValue}
-            onClick={() => setSubmitted(true)}
-          >
-            Submit
-          </button>
+          <div id="btn-container" className="flex justify-between w-full mt-10">
+            <button
+              className="typeform-back-btn btn-back"
+              onClick={handleBack}
+            >
+              <span>&larr;</span> Back
+            </button>
+            <button
+              className="btn-next"
+              disabled={!captchaValue}
+              onClick={() => setSubmitted(true)}
+            >
+              Submit
+            </button>
+          </div>
         </div>
       ) : (
         <div className="typeform-overlay">
+          <h1 className="typeform-title">{currentQ === 0 ? 'Personal Details' : questions[currentQ-1].label}{currentQ > 0 && questions[currentQ-1].required && <span style={{color:'#ffd700'}}>*</span>}</h1>
           {currentQ === 0 ? (
             <>
-              <h1 className="typeform-title">Personal Details</h1>
               <div className="typeform-question">
                 <label>What's your name? <span style={{color:'#ffd700'}}>*</span></label>
                 <input
@@ -204,13 +220,9 @@ function App() {
                 <label>What's your email address? <span style={{color:'#ffd700'}}>*</span></label>
                 <input type="email" name="email" placeholder="Enter your email address" value={answers.email || ''} onChange={handleChange} required className="typeform-input" />
               </div>
-              <button className="typeform-next-btn" onClick={handleNext}>
-                Next &rarr;
-              </button>
             </>
           ) : (
             <>
-              <h1 className="typeform-title">{questions[currentQ-1].label}{questions[currentQ-1].required && <span style={{color:'#ffd700'}}>*</span>}</h1>
               {questions[currentQ-1].type === 'select' ? (
                 <select name={questions[currentQ-1].name} value={answers[questions[currentQ-1].name] || ''} onChange={handleChange} required={questions[currentQ-1].required} className="typeform-input">
                   {questions[currentQ-1].options.map(opt => (
@@ -290,11 +302,24 @@ function App() {
                   />
                 </div>
               )}
-              <button className="typeform-next-btn" onClick={handleNext}>
-                Next &rarr;
-              </button>
             </>
           )}
+          <div id="btn-container" className="flex justify-between mt-6 w-full">
+            {currentQ > 0 ? (
+              <button 
+                className="typeform-back-btn btn-back" 
+                onClick={handleBack}
+              >
+                <span>&larr;</span> Back
+              </button>
+            ) : <div />}
+            <button 
+              className="typeform-next-btn btn-next" 
+              onClick={handleNext}
+            >
+              Next <span>&rarr;</span>
+            </button>
+          </div>
         </div>
       )}
     </div>
