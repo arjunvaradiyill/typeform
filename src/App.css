@@ -342,3 +342,244 @@ body {
   border-color: #5ab5a7;
   color: #fff;
 }
+media screen and (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding: 8px 16px 6px 16px;
+  }
+
+  .navbar-logo {
+    width: 100px;
+  }
+
+  .hero-overlay {
+    padding: 24px 20px 24px 20px;
+    margin-top: 60px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .typeform-overlay {
+    padding: 24px 20px 24px 20px;
+    margin-top: 60px;
+  }
+
+  .typeform-title {
+    font-size: 1.8rem;
+  }
+
+  .typeform-question label {
+    font-size: 1.1rem;
+  }
+
+  .typeform-input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .typeform-input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  /* Date Picker Mobile Styles */
+  .react-datepicker {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+  }
+
+  .react-datepicker__day {
+    width: 2rem !important;
+    height: 2rem !important;
+    line-height: 2rem !important;
+    margin: 0.1rem !important;
+  }
+
+  .react-datepicker__day-name {
+    width: 2rem !important;
+    margin: 0.1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px 8px 20px;
+  }
+
+  .navbar-logo {
+    width: 120px;
+  }
+
+  .hero-overlay {
+    padding: 28px 20px;
+    margin-top: 80px;
+    width: 85%;
+    max-width: 400px;
+  }
+
+  .hero-logo {
+    width: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .typeform-overlay {
+    padding: 28px 20px;
+    margin-top: 80px;
+    width: 85%;
+    max-width: 450px;
+  }
+
+  .typeform-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .typeform-question label {
+    font-size: 1.2rem;
+  }
+
+  .typeform-input {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .typeform-next-btn {
+    padding: 10px 24px;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .btn-back {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    min-width: 100px;
+  }
+
+  .btn-next {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    min-width: 100px;
+  }
+
+  #btn-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #btn-container button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding: 8px 16px 6px 16px;
+  }
+
+  .navbar-logo {
+    width: 100px;
+  }
+
+  .hero-overlay {
+    padding: 24px 16px;
+    margin-top: 60px;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .typeform-overlay {
+    padding: 24px 16px;
+    margin-top: 60px;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .typeform-title {
+    font-size: 1.8rem;
+  }
+
+  .typeform-question label {
+    font-size: 1.1rem;
+  }
+
+  .typeform-input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .typeform-input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  /* Date Picker Mobile Styles */
+  .react-datepicker {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+  }
+
+  .react-datepicker__day {
+    width: 2rem !important;
+    height: 2rem !important;
+    line-height: 2rem !important;
+    margin: 0.1rem !important;
+  }
+
+  .react-datepicker__day-name {
+    width: 2rem !important;
+    margin: 0.1rem !important;
+  }
+}
+
+/* Fix for iOS input zoom */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
+}
+
+/* Improve touch targets */
+button,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
