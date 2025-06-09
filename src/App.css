@@ -1,0 +1,435 @@
+/* .bg-container {
+  background-image: url('./assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.15);
+  padding: 18px 40px 10px 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  width: 160px;
+  height: auto;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  padding: 48px 40px 40px 40px;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 32px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 2.6rem;
+  font-family: 'Quicksand', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.hero-btn {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #222;
+}
+
+.typeform-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  padding: 48px 40px 40px 40px;
+  max-width: 700px;
+  width: 90%;
+  margin: 110px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.typeform-title {
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Quicksand', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 36px;
+  line-height: 1.2;
+  text-align: left;
+  width: 100%;
+}
+
+.typeform-question {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.typeform-question label {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+.typeform-example {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+.typeform-input {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 2px solid #ffeaea;
+  font-size: 1.1rem;
+  margin-top: 6px;
+  margin-bottom: 0;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.typeform-input:focus {
+  border: 2px solid #ffd700;
+}
+
+.typeform-next-btn {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.typeform-next-btn:hover {
+  color: #ffd700;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Jost', 'Quicksand', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  box-sizing: border-box;
+  padding-top: 80px; /* Prevent content from hiding under fixed navbar */
+}
+
+.bg-container {
+  background-image: url('./assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 18px 40px 10px 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  width: 160px;
+  height: auto;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  padding: 48px 40px 40px 40px;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 32px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 2.6rem;
+  font-family: 'Quicksand', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.hero-btn {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #222;
+}
+
+.typeform-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  padding: 48px 40px 40px 40px;
+  max-width: 700px;
+  width: 90%;
+  margin: 110px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.typeform-title {
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Quicksand', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 36px;
+  line-height: 1.2;
+  text-align: left;
+  width: 100%;
+}
+
+.typeform-question {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.typeform-question label {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+.typeform-example {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+.typeform-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #6ec6b8;
+  color: #fff;
+  font-size: 2.8rem;
+  font-family: inherit;
+  padding: 8px 0 8px 8px;
+  margin-bottom: 18px;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.3s;
+}
+
+.typeform-input::placeholder {
+  color: #6ec6b7;
+  opacity: 0.5;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.typeform-input:focus {
+  border-bottom: 3px solid #ffd700;
+  color: #fff;
+}
+
+.typeform-next-btn {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.typeform-next-btn:hover {
+  color: #ffd700;
+}
+
+/* Typography consistency */
+.typeform-overlay,
+.typeform-input,
+.typeform-title,
+.typeform-question label {
+  font-family: 'Jost', 'Quicksand', Arial, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .typeform-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+
+  .typeform-input {
+    font-size: 1rem;
+  }
+
+  .typeform-question label {
+    font-size: 1.1rem;
+  }
+}
+.typeform-input {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10) inset;
+  transition: border 0.2s, background 0.3s, box-shadow 0.3s, color 0.2s;
+}
+
+.typeform-input::placeholder {
+  color: #f3e9c7;
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.typeform-input:focus {
+  border: 1.5px solid #ffd700;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.18), 0 2px 10px rgba(0, 0, 0, 0.10) inset;
+  color: #fff;
+}
